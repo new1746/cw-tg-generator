@@ -577,4 +577,27 @@ grid8(int numt)
 	outtextxy(getmaxx()-10,getmaxy()-10,temp);
 	system("cls");
 	cout<<temp<<endl;
+	
+	if(getch()) closegraph();
+	
+	system("cls");
+	for(int y = 0; y < 4; y++)
+	{
+		if(ran[y] < 5) ran[y] = 3;
+		if(ran[y] == 5 || ran[y] == 6) ran[y] = 2;
+		if(ran[y] == 7) ran[y] = 1;
+	}
+	if(ran[0] == 1) cout<<"#1\t"<<buffer[0]<<endl;
+	if(ran[1] == 1) cout<<"#1\t"<<buffer[1]<<endl;
+	if(ran[2] == 1) cout<<"#1\t"<<buffer[2]<<endl;
+	if(ran[3] == 1) cout<<"#1\t"<<buffer[3]<<endl;
+	if(ran[0] == 2) cout<<"#2\t"<<buffer[0]<<endl;
+	if(ran[1] == 2) cout<<"#2\t"<<buffer[1]<<endl;
+	if(ran[2] == 2) cout<<"#2\t"<<buffer[2]<<endl;
+	if(ran[3] == 2) cout<<"#2\t"<<buffer[3]<<endl;
+	if(ran[0] == 3) cout<<"#3-4\t"<<buffer[0]<<endl;
+	if(ran[1] == 3) cout<<"#3-4\t"<<buffer[1]<<endl;
+	if(ran[2] == 3) cout<<"#3-4\t"<<buffer[2]<<endl;
+	if(ran[3] == 3) cout<<"#3-4\t"<<buffer[3]<<endl;
+	cout<<endl;
 }
