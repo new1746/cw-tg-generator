@@ -495,36 +495,36 @@ grid8(int numt)
 					}
 				}
 			}
-			if(cpx > 180 && cpx < 300 && cpy > 60 && cpy < 90 && gt[4] && !gt[1] && !gt[0])
+			if(cpx > 180 && cpx < 300 && cpy > 220 && cpy <  && gt[5] && !gt[3] && !gt[2])
 			{
-				gt[4] = 0;
+				gt[5] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==9)
+					if(ran[u]==11)
 					{
 						setbkcolor(8);
-						outtextxy(400,140+6,buffer[u]);
-						bar(181,61,300,90);
+						outtextxy(400,170+6,buffer[u]);
+						bar(181,161,300,190);
 						setbkcolor(2);
-						outtextxy(240,60+6,buffer[u]);
-						ran[u] = 13;
+						outtextxy(240,220+6,buffer[u]);
+						ran[u] = 14;
 						break;
 					}
 				}
 			}
-			if(cpx > 180 && cpx < 300 && cpy > 90 && cpy < 120 && gt[4] && !gt[1] && !gt[0])
+			if(cpx > 180 && cpx < 300 && cpy > 90 && cpy < 120 && gt[5] && !gt[3] && !gt[2])
 			{
-				gt[4] = 0;
+				gt[5] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==10)
+					if(ran[u]==12)
 					{
 						setbkcolor(8);
-						outtextxy(400,140+6,buffer[u]);
-						bar(181,91,300,120);
+						outtextxy(400,170+6,buffer[u]);
+						bar(181,191,300,220);
 						setbkcolor(2);
-						outtextxy(240,90+6,buffer[u]);
-						ran[u] = 13;
+						outtextxy(240,250+6,buffer[u]);
+						ran[u] = 14;
 						break;
 					}
 				}
