@@ -530,7 +530,7 @@ grid8(int numt)
 				}
 			}
 			//===============================================================================
-			if(cpx > 340 && cpx < 460 && cpy > 135 && cpy < 170 && gt[6] && !gt[5] && !gt[4])
+			if(cpx > 340 && cpx < 460 && cpy > 140 && cpy < 170 && gt[6] && !gt[5] && !gt[4])
 			{
 				gt[6] = 0;
 				for(int u = 0; u < 8; u++)
@@ -570,11 +570,11 @@ grid8(int numt)
 		if(tf) break;
 		delay(10);
 	}
-	char temp[] = "Press any key";
+	char temp[] = "Press any key to continue";
 	settextjustify(2,0);
 	setbkcolor(8);
 	setcolor(15);
 	outtextxy(getmaxx()-10,getmaxy()-10,temp);
 	system("cls");
-	cout<<temp<<" to continue"<<endl;
+	cout<<temp<<endl;
 }
