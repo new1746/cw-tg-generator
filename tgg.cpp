@@ -315,7 +315,7 @@ grid8(int numt)
 		}
 	}
 	short int cpx,cpy;
-	bool gt[7] = {1,1,1,1,1,1,1},tf = 0;
+	bool gt[7] = {1,1,1,1,1,1,1,1},tf = 0;
 	setfillstyle(1,2);
 	while(1)
 	{
@@ -427,26 +427,26 @@ grid8(int numt)
 				}
 			}
 			//========================================================
-			if(cpx > 20 && cpx < 140 && cpy > 20 && cpy < 50 && gt[0])
+			if(cpx > 20 && cpx < 140 && cpy > 180 && cpy < 210 && gt[2])
 			{
-				gt[0] = 0;
+				gt[2] = 0;
 				for(int u = 0; u < 8; u++)
 				{
 					if(ran[u]==1)
 					{
 						setbkcolor(8);
-						outtextxy(240,60+6,buffer[u]);
+						outtextxy(240,220+6,buffer[u]);
 						bar(21,21,140,50);
 						setbkcolor(2);
-						outtextxy(80,20+6,buffer[u]);
-						ran[u] = 9;
+						outtextxy(80,180+6,buffer[u]);
+						ran[u] = 11;
 						break;
 					}
 				}
 			}
-			if(cpx > 20 && cpx < 140 && cpy > 50 && cpy < 80 && gt[0])
+			if(cpx > 20 && cpx < 140 && cpy > 210 && cpy < 240 && gt[2])
 			{
-				gt[0] = 0;
+				gt[2] = 0;
 				for(int u = 0; u < 8; u++)
 				{
 					if(ran[u]==2)
@@ -456,7 +456,7 @@ grid8(int numt)
 						bar(21,51,140,80);
 						setbkcolor(2);
 						outtextxy(80,50+6,buffer[u]);
-						ran[u] = 9;
+						ran[u] = 11;
 						break;
 					}
 				}
