@@ -469,11 +469,11 @@ grid8(int numt)
 					if(ran[u]==7)
 					{
 						setbkcolor(8);
-						outtextxy(240,300+6,buffer[u]);
-						bar(21,101,140,130);
+						outtextxy(240,220+6,buffer[u]);
+						bar(21,261,140,290);
 						setbkcolor(2);
-						outtextxy(80,100+6,buffer[u]);
-						ran[u] = 10;
+						outtextxy(80,260+6,buffer[u]);
+						ran[u] = 12;
 						break;
 					}
 				}
@@ -486,11 +486,11 @@ grid8(int numt)
 					if(ran[u]==8)
 					{
 						setbkcolor(8);
-						outtextxy(240,300+6,buffer[u]);
-						bar(21,131,140,160);
+						outtextxy(240,220+6,buffer[u]);;
+						bar(21,291,140,320);
 						setbkcolor(2);
-						outtextxy(80,130+6,buffer[u]);
-						ran[u] = 10;
+						outtextxy(80,290+6,buffer[u]);
+						ran[u] = 12;
 						break;
 					}
 				}
