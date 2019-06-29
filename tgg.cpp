@@ -432,11 +432,11 @@ grid8(int numt)
 				gt[2] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==1)
+					if(ran[u]==5)
 					{
 						setbkcolor(8);
 						outtextxy(240,220+6,buffer[u]);
-						bar(21,21,140,50);
+						bar(21,181,140,210);
 						setbkcolor(2);
 						outtextxy(80,180+6,buffer[u]);
 						ran[u] = 11;
@@ -449,13 +449,13 @@ grid8(int numt)
 				gt[2] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==2)
+					if(ran[u]==6)
 					{
 						setbkcolor(8);
 						outtextxy(240,60+6,buffer[u]);
-						bar(21,51,140,80);
+						bar(21,211,140,240);
 						setbkcolor(2);
-						outtextxy(80,50+6,buffer[u]);
+						outtextxy(80,210+6,buffer[u]);
 						ran[u] = 11;
 						break;
 					}
