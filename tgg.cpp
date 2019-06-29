@@ -584,7 +584,7 @@ grid8(int numt)
 	
 	for(int y = 0, fn = 1, u; y < 4; y++)
 	{
-		for(u = 0; u < 8; y++)
+		for(u = 0; u < 8; u++)
 		{
 			if(ran[u] == -1) continue;
 			if(fn == 1)
@@ -599,38 +599,22 @@ grid8(int numt)
 				if(ran[u] == 13 || ran[u] == 14) cout<<"#2\t"<<buffer[u]<<endl;
 				ran[u] = -1;
 				fn = 3;
+				continue;
 			}
 			if(fn == 3)
 			{
 				if(ran[u] == 9 || ran[u] == 10 || ran[u] == 11 || ran[u] == 12) cout<<"#3-4\t"<<buffer[u]<<endl;
 				ran[u] = -1;
 				fn = 4;
+				continue;
 			}
 			if(fn == 4)
 			{
 				if(ran[u] == 1 || ran[u] == 2 || ran[u] == 3 || ran[u] == 4 || ran[u] == 5 || ran[u] == 6 || ran[u] == 7 || ran[u] == 8) cout<<"#5-8\t"<<buffer[u]<<endl;
 				ran[u] = -1;
+				continue;
 			}
 		}
 	}
-	cout<<endl;
-	for(int y = 0; y < 4; y++)
-	{
-		if(ran[y] < 5) ran[y] = 3;
-		if(ran[y] == 5 || ran[y] == 6) ran[y] = 2;
-		if(ran[y] == 7) ran[y] = 1;
-	}
-	if(ran[0] == 1) cout<<"#1\t"<<buffer[0]<<endl;
-	if(ran[1] == 1) cout<<"#1\t"<<buffer[1]<<endl;
-	if(ran[2] == 1) cout<<"#1\t"<<buffer[2]<<endl;
-	if(ran[3] == 1) cout<<"#1\t"<<buffer[3]<<endl;
-	if(ran[0] == 2) cout<<"#2\t"<<buffer[0]<<endl;
-	if(ran[1] == 2) cout<<"#2\t"<<buffer[1]<<endl;
-	if(ran[2] == 2) cout<<"#2\t"<<buffer[2]<<endl;
-	if(ran[3] == 2) cout<<"#2\t"<<buffer[3]<<endl;
-	if(ran[0] == 3) cout<<"#3-4\t"<<buffer[0]<<endl;
-	if(ran[1] == 3) cout<<"#3-4\t"<<buffer[1]<<endl;
-	if(ran[2] == 3) cout<<"#3-4\t"<<buffer[2]<<endl;
-	if(ran[3] == 3) cout<<"#3-4\t"<<buffer[3]<<endl;
 	cout<<endl;
 }
