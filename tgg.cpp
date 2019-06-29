@@ -581,6 +581,27 @@ grid8(int numt)
 	if(getch()) closegraph();
 	
 	system("cls");
+	
+	for(int y = 0; y < 4; y++)
+	{
+		for(int u = 0, int fn = 1; u < 8; y++)
+		{
+			if(fn == 1)
+			{
+				if(ran[u] == 15) cout<<"#1\t"<<buffer[u]<<endl;
+				ran[u] = -1;
+				fn = 2;
+				break;
+			}
+			if(fn == 2)
+			{
+				if(ran[u] == 13 || ran[u] == 14) cout<<"#2\t"<<buffer[u]<<endl;
+				ran[u] = -1;
+				fn = 2;
+			}
+		}
+	}
+	
 	for(int y = 0; y < 4; y++)
 	{
 		if(ran[y] < 5) ran[y] = 3;
