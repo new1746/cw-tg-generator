@@ -530,7 +530,7 @@ grid8(int numt)
 				}
 			}
 			//===============================================================================
-			if(cpx > 340 && cpx < 460 && cpy > 135 && cpy < 165 && gt[6] && !gt[5] && !gt[4])
+			if(cpx > 340 && cpx < 460 && cpy > 135 && cpy < 170 && gt[6] && !gt[5] && !gt[4])
 			{
 				gt[6] = 0;
 				for(int u = 0; u < 8; u++)
@@ -539,15 +539,16 @@ grid8(int numt)
 					{
 						setbkcolor(8);
 						outtextxy(560,155+6,buffer[u]);
-						bar(341,221,460,170);
+						bar(341,141,460,170);
 						setbkcolor(2);
 						outtextxy(400,140+6,buffer[u]);
 						ran[u] = 15;
+						tf = 1;
 						break;
 					}
 				}
 			}
-			if(cpx > 340 && cpx < 460 && cpy > 165 && cpy < 195 && gt[6] && !gt[5] && !gt[4])
+			if(cpx > 340 && cpx < 460 && cpy > 170 && cpy < 200 && gt[6] && !gt[5] && !gt[4])
 			{
 				gt[6] = 0;
 				for(int u = 0; u < 8; u++)
@@ -560,6 +561,7 @@ grid8(int numt)
 						setbkcolor(2);
 						outtextxy(400,170+6,buffer[u]);
 						ran[u] = 15;
+						tf = 1;
 						break;
 					}
 				}
