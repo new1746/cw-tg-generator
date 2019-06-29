@@ -469,7 +469,7 @@ grid8(int numt)
 					if(ran[u]==7)
 					{
 						setbkcolor(8);
-						outtextxy(240,220+6,buffer[u]);
+						outtextxy(240,250+6,buffer[u]);
 						bar(21,261,140,290);
 						setbkcolor(2);
 						outtextxy(80,260+6,buffer[u]);
@@ -486,7 +486,7 @@ grid8(int numt)
 					if(ran[u]==8)
 					{
 						setbkcolor(8);
-						outtextxy(240,220+6,buffer[u]);;
+						outtextxy(240,250+6,buffer[u]);;
 						bar(21,291,140,320);
 						setbkcolor(2);
 						outtextxy(80,290+6,buffer[u]);
@@ -495,36 +495,73 @@ grid8(int numt)
 					}
 				}
 			}
-			if(cpx > 180 && cpx < 300 && cpy > 60 && cpy < 90 && gt[4] && !gt[1] && !gt[0])
+			if(cpx > 180 && cpx < 300 && cpy > 220 && cpy < 250 && gt[5] && !gt[3] && !gt[2])
 			{
-				gt[4] = 0;
+				gt[5] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==9)
+					if(ran[u]==11)
 					{
 						setbkcolor(8);
-						outtextxy(400,140+6,buffer[u]);
-						bar(181,61,300,90);
+						outtextxy(400,170+6,buffer[u]);
+						bar(181,221,300,250);
 						setbkcolor(2);
-						outtextxy(240,60+6,buffer[u]);
-						ran[u] = 13;
+						outtextxy(240,220+6,buffer[u]);
+						ran[u] = 14;
 						break;
 					}
 				}
 			}
-			if(cpx > 180 && cpx < 300 && cpy > 90 && cpy < 120 && gt[4] && !gt[1] && !gt[0])
+			if(cpx > 180 && cpx < 300 && cpy > 250 && cpy < 280 && gt[5] && !gt[3] && !gt[2])
 			{
-				gt[4] = 0;
+				gt[5] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==10)
+					if(ran[u]==12)
 					{
 						setbkcolor(8);
-						outtextxy(400,140+6,buffer[u]);
-						bar(181,91,300,120);
+						outtextxy(400,170+6,buffer[u]);
+						bar(181,251,300,280);
 						setbkcolor(2);
-						outtextxy(240,90+6,buffer[u]);
-						ran[u] = 13;
+						outtextxy(240,250+6,buffer[u]);
+						ran[u] = 14;
+						break;
+					}
+				}
+			}
+			//===============================================================================
+			if(cpx > 340 && cpx < 460 && cpy > 140 && cpy < 170 && gt[6] && !gt[5] && !gt[4])
+			{
+				gt[6] = 0;
+				for(int u = 0; u < 8; u++)
+				{
+					if(ran[u]==13)
+					{
+						setbkcolor(8);
+						outtextxy(560,155+6,buffer[u]);
+						bar(341,141,460,170);
+						setbkcolor(2);
+						outtextxy(400,140+6,buffer[u]);
+						ran[u] = 15;
+						tf = 1;
+						break;
+					}
+				}
+			}
+			if(cpx > 340 && cpx < 460 && cpy > 170 && cpy < 200 && gt[6] && !gt[5] && !gt[4])
+			{
+				gt[6] = 0;
+				for(int u = 0; u < 8; u++)
+				{
+					if(ran[u]==14)
+					{
+						setbkcolor(8);
+						outtextxy(560,155+6,buffer[u]);
+						bar(341,171,460,200);
+						setbkcolor(2);
+						outtextxy(400,170+6,buffer[u]);
+						ran[u] = 15;
+						tf = 1;
 						break;
 					}
 				}
@@ -533,11 +570,63 @@ grid8(int numt)
 		if(tf) break;
 		delay(10);
 	}
-	char temp[] = "Press any key";
+	char temp[] = "Press any key to continue";
 	settextjustify(2,0);
 	setbkcolor(8);
 	setcolor(15);
 	outtextxy(getmaxx()-10,getmaxy()-10,temp);
 	system("cls");
-	cout<<temp<<" to continue"<<endl;
+	cout<<temp<<endl;
+	
+	if(getch()) closegraph();
+	
+	system("cls");
+	
+	for(int y = 0, fn = 1, u; y < 4; y++)
+	{
+		for(u = 0; u < 8; u++)
+		{
+			if(ran[u] == -1) continue;
+			if(fn == 1)
+			{
+				if(ran[u] == 15)
+				{
+					cout<<"#1\t"<<buffer[u]<<endl;
+					ran[u] = -1;
+					fn++;
+					break;
+				}
+			}
+			if(fn == 2)
+			{
+				if(ran[u] == 13 || ran[u] == 14)
+				{
+					cout<<"#2\t"<<buffer[u]<<endl;
+					ran[u] = -1;
+					fn++;
+				}
+				continue;
+			}
+			if(fn == 3 || fn == 4)
+			{
+				if(ran[u] == 9 || ran[u] == 10 || ran[u] == 11 || ran[u] == 12)
+				{
+					cout<<"#3-4\t"<<buffer[u]<<endl;
+					ran[u] = -1;
+					fn++;
+				}
+				continue;
+			}
+			if(fn > 4)
+			{
+				if(ran[u] == 1 || ran[u] == 2 || ran[u] == 3 || ran[u] == 4 || ran[u] == 5 || ran[u] == 6 || ran[u] == 7 || ran[u] == 8)
+				{
+					cout<<"#5-8\t"<<buffer[u]<<endl;
+					ran[u] = -1;
+				}
+				continue;
+			}
+		}
+	}
+	cout<<endl;
 }
