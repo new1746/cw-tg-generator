@@ -529,7 +529,41 @@ grid8(int numt)
 					}
 				}
 			}
-			
+			//===============================================================================
+			if(cpx > 340 && cpx < 460 && cpy > 130 && cpy < 160 && gt[6] && !gt[5] && !gt[4])
+			{
+				gt[6] = 0;
+				for(int u = 0; u < 8; u++)
+				{
+					if(ran[u]==13)
+					{
+						setbkcolor(8);
+						outtextxy(500,155+6,buffer[u]);
+						bar(341,221,460,250);
+						setbkcolor(2);
+						outtextxy(240,220+6,buffer[u]);
+						ran[u] = 15;
+						break;
+					}
+				}
+			}
+			if(cpx > 340 && cpx < 460 && cpy > 160 && cpy < 190 && gt[6] && !gt[5] && !gt[4])
+			{
+				gt[6] = 0;
+				for(int u = 0; u < 8; u++)
+				{
+					if(ran[u]==14)
+					{
+						setbkcolor(8);
+						outtextxy(560,155+6,buffer[u]);
+						bar(341,221,460,250);
+						setbkcolor(2);
+						outtextxy(240,250+6,buffer[u]);
+						ran[u] = 15;
+						break;
+					}
+				}
+			}
 		}
 		if(tf) break;
 		delay(10);
