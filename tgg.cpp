@@ -582,10 +582,11 @@ grid8(int numt)
 	
 	system("cls");
 	
-	for(int y = 0; y < 4; y++)
+	for(int y = 0, fn = 1, u; y < 4; y++)
 	{
-		for(int u = 0, int fn = 1; u < 8; y++)
+		for(u = 0; u < 8; y++)
 		{
+			if(ran[u] == -1) continue;
 			if(fn == 1)
 			{
 				if(ran[u] == 15) cout<<"#1\t"<<buffer[u]<<endl;
@@ -594,6 +595,12 @@ grid8(int numt)
 				break;
 			}
 			if(fn == 2)
+			{
+				if(ran[u] == 13 || ran[u] == 14) cout<<"#2\t"<<buffer[u]<<endl;
+				ran[u] = -1;
+				fn = 2;
+			}
+			if(fn == 3)
 			{
 				if(ran[u] == 13 || ran[u] == 14) cout<<"#2\t"<<buffer[u]<<endl;
 				ran[u] = -1;
