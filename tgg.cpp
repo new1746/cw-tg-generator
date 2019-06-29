@@ -589,28 +589,32 @@ grid8(int numt)
 			if(ran[u] == -1) continue;
 			if(fn == 1)
 			{
-				if(ran[u] == 15) cout<<"#1\t"<<buffer[u]<<endl;
+				if(ran[u] == 15)
+				cout<<"#1\t"<<buffer[u]<<endl;
 				ran[u] = -1;
-				fn = 2;
+				fn++;
 				break;
 			}
 			if(fn == 2)
 			{
-				if(ran[u] == 13 || ran[u] == 14) cout<<"#2\t"<<buffer[u]<<endl;
+				if(ran[u] == 13 || ran[u] == 14)
+				cout<<"#2\t"<<buffer[u]<<endl;
 				ran[u] = -1;
-				fn = 3;
+				fn++;
 				continue;
 			}
 			if(fn == 3)
 			{
-				if(ran[u] == 9 || ran[u] == 10 || ran[u] == 11 || ran[u] == 12) cout<<"#3-4\t"<<buffer[u]<<endl;
+				if(ran[u] == 9 || ran[u] == 10 || ran[u] == 11 || ran[u] == 12)
+				cout<<"#3-4\t"<<buffer[u]<<endl;
 				ran[u] = -1;
-				fn = 4;
+				fn++;
 				continue;
 			}
-			if(fn == 4)
+			if(fn == 5)
 			{
-				if(ran[u] == 1 || ran[u] == 2 || ran[u] == 3 || ran[u] == 4 || ran[u] == 5 || ran[u] == 6 || ran[u] == 7 || ran[u] == 8) cout<<"#5-8\t"<<buffer[u]<<endl;
+				if(ran[u] == 1 || ran[u] == 2 || ran[u] == 3 || ran[u] == 4 || ran[u] == 5 || ran[u] == 6 || ran[u] == 7 || ran[u] == 8)
+				cout<<"#5-8\t"<<buffer[u]<<endl;
 				ran[u] = -1;
 				continue;
 			}
