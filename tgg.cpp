@@ -602,7 +602,13 @@ grid8(int numt)
 			}
 			if(fn == 3)
 			{
-				if(ran[u] == 13 || ran[u] == 14) cout<<"#2\t"<<buffer[u]<<endl;
+				if(ran[u] == 9 || ran[u] == 10 || ran[u] == 11 || ran[u] == 12) cout<<"#3-4\t"<<buffer[u]<<endl;
+				ran[u] = -1;
+				fn = 2;
+			}
+			if(fn == 4)
+			{
+				if(ran[u] == 1 || ran[u] == 2 || ran[u] == 11 || ran[u] == 12) cout<<"#3-4\t"<<buffer[u]<<endl;
 				ran[u] = -1;
 				fn = 2;
 			}
