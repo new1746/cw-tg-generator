@@ -1,7 +1,6 @@
 #include <iostream>
 #include <ctime>
 #include <cstring>
-#include <windows.h>
 #include "func.h"
 
 using namespace std;
@@ -9,7 +8,6 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	system("color 80");
 	srand(time(0));
 	char inputtn[100];
 	int numbert = 8;
@@ -56,6 +54,5 @@ int main()
 			break;
 		}
 	}
-	system("pause");
 	return 0;
 }
