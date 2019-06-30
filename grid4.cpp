@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cairo-svg.h>
+#include <cairo.h>
 #include <graphics.h>
 #include <ctime>
 #include "func.h"
