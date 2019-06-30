@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstring>
+#include <windows.h>
 #include "func.h"
 
 using namespace std;
