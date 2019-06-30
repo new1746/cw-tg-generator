@@ -1,10 +1,11 @@
 #include <iostream>
 #include <ctime>
 #include <cstring>
+#include "func.h"
 
 using namespace std;
 
-main()
+int main()
 {
 	setlocale(LC_ALL, "Russian");
 	system("color 80");

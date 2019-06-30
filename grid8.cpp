@@ -1,6 +1,9 @@
 #include <iostream>
 #include <graphics.h>
 #include <ctime>
+#include "func.h"
+
+using namespace std;
 
 grid8(int numt)
 {

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <graphics.h>
 #include <ctime>
+#include "func.h"
 
 using namespace std;
 
