@@ -16,7 +16,7 @@ const char windowname[] = "Tournament grid generator";//Íàçâàíèå îêí�
 typedef char text[ttl+1];//Ïåðåìåííàÿ äëÿ ìàññèâà íàçâàíèé êîìàíä
 
 //===============[Ãëîáàëüíûå ïåðåìåííûå]===============
-text buffer[32];//Ìàêñèìàëüíîå êîëè÷åñâî êîìàíä (ìàññèâ íàçâàíèé)
+text buffer[32] = {"team# 1","team# 2","team# 3","team# 4","team# 5","team# 6","team# 7","team# 8","team# 9","team# 10","team# 11","team# 12","team# 13","team# 14","team# 15","team# 16","team# 17","team# 18","team# 19","team# 20","team# 21","team# 22","team# 23","team# 24","team# 25","team# 26","team# 27","team# 28","team# 29","team# 30","team# 31","team# 32"};//Ìàêñèìàëüíîå êîëè÷åñâî êîìàíä (ìàññèâ íàçâàíèé)
 int placegrid[32];//Ìàêñèìàëüíîå êîëè÷åñâî êîìàíä (ìàññèâ çàíÿòûõ ìåñò)
 
 int grid4(int);
@@ -30,7 +30,7 @@ main()
 	system("color 80");
 	srand(time(0));
 	char inputtn[100];
-	int numbert;
+	int numbert = 8;
 	string check;
 	cout<<"Ââåäèòå êîëè÷åñòâî êîìàíä ðàâíîå 4/8/16/32."<<endl;
 	cin>>numbert;
@@ -263,7 +263,7 @@ grid4(int numt)
 
 grid8(int numt)
 {
-	initwindow(489+160,213+180,windowname);
+	initwindow(489+160, 213+180, windowname);
 	setcolor(15);
 	setbkcolor(8);
 	cleardevice();
@@ -309,7 +309,6 @@ grid8(int numt)
 			if(t==2 || t==3) outtextxy(80,40+6+(30*t),buffer[i]);
 			if(t==4 || t==5) outtextxy(80,60+6+(30*t),buffer[i]);
 			if(t==6 || t==7) outtextxy(80,80+6+(30*t),buffer[i]);
-			ran[i] = 0;
 			t++;
 			ran[i] = t;
 		}
@@ -495,36 +494,72 @@ grid8(int numt)
 					}
 				}
 			}
-			if(cpx > 180 && cpx < 300 && cpy > 60 && cpy < 90 && gt[4] && !gt[1] && !gt[0])
+			if(cpx > 180 && cpx < 300 && cpy > 220 && cpy < 250 && gt[5] && !gt[2] && !gt[3])
 			{
-				gt[4] = 0;
+				gt[5] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==9)
+					if(ran[u]==11)
 					{
 						setbkcolor(8);
-						outtextxy(400,140+6,buffer[u]);
-						bar(181,61,300,90);
+						outtextxy(400,170+6,buffer[u]);
+						bar(181,221,300,250);
 						setbkcolor(2);
-						outtextxy(240,60+6,buffer[u]);
-						ran[u] = 13;
+						outtextxy(240,220+6,buffer[u]);
+						ran[u] = 14;
 						break;
 					}
 				}
 			}
-			if(cpx > 180 && cpx < 300 && cpy > 90 && cpy < 120 && gt[4] && !gt[1] && !gt[0])
+			if(cpx > 180 && cpx < 300 && cpy > 250 && cpy < 280 && gt[5] && !gt[2] && !gt[3])
 			{
-				gt[4] = 0;
+				gt[5] = 0;
 				for(int u = 0; u < 8; u++)
 				{
-					if(ran[u]==10)
+					if(ran[u]==12)
 					{
 						setbkcolor(8);
-						outtextxy(400,140+6,buffer[u]);
-						bar(181,91,300,120);
+						outtextxy(400,170+6,buffer[u]);
+						bar(181,251,300,280);
 						setbkcolor(2);
-						outtextxy(240,90+6,buffer[u]);
-						ran[u] = 13;
+						outtextxy(240,250+6,buffer[u]);
+						ran[u] = 14;
+						break;
+					}
+				}
+			}
+			if(cpx > 341 && cpx < 460 && cpy > 140 && cpy < 170 && gt[6] && !gt[4] && !gt[5])
+			{
+				gt[6] = 0;
+				for(int u = 0; u < 8; u++)
+				{
+					if(ran[u]==13)
+					{
+						setbkcolor(8);
+						outtextxy(560,155+6,buffer[u]);
+						bar(341,141,460,170);
+						setbkcolor(2);
+						outtextxy(400,140+6,buffer[u]);
+						ran[u] = 15;
+						tf = 1;
+						break;
+					}
+				}
+			}
+			if(cpx > 341 && cpx < 460 && cpy > 170 && cpy < 200 && gt[6] && !gt[4] && !gt[5])
+			{
+				gt[6] = 0;
+				for(int u = 0; u < 8; u++)
+				{
+					if(ran[u]==14)
+					{
+						setbkcolor(8);
+						outtextxy(560,155+6,buffer[u]);
+						bar(341,171,460,200);
+						setbkcolor(2);
+						outtextxy(400,170+6,buffer[u]);
+						ran[u] = 15;
+						tf = 1;
 						break;
 					}
 				}
@@ -533,11 +568,37 @@ grid8(int numt)
 		if(tf) break;
 		delay(10);
 	}
-	char temp[] = "Press any key";
+	
+	char temp[] = "Press any key to continue";
 	settextjustify(2,0);
 	setbkcolor(8);
 	setcolor(15);
 	outtextxy(getmaxx()-10,getmaxy()-10,temp);
 	system("cls");
-	cout<<temp<<" to continue"<<endl;
+	cout<<temp<<endl;
+	
+	if(getch()) closegraph();
+	
+	system("cls");
+	
+	for(int y = 0; y < 8; y++)
+	{
+		if(ran[y] <= 8) ran[y] = 4;
+		if(ran[y]<=12 && ran[y]>8) ran[y] = 3;
+		if(ran[y] == 13 || ran[y] == 14) ran[y] = 2;
+		if(ran[y] == 15) ran[y] = 1;
+	}
+	
+	for(int i = 1; i<=4; i++)
+	{
+		for(int u = 0; u<8; u++)
+		{
+			if(i==4)	if(ran[u] == i) cout<<"#5-8\t"<<buffer[u]<<endl;
+			if(i==3)	if(ran[u] == i) cout<<"#3-4\t"<<buffer[u]<<endl;
+			if(i==2)	if(ran[u] == i) cout<<"#2\t"<<buffer[u]<<endl;
+			if(i==1)	if(ran[u] == i) cout<<"#1\t"<<buffer[u]<<endl;
+		}
+	}
+	
+	cout<<endl;
 }
