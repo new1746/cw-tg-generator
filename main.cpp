@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ctime>
+#include <cstdlib>
 #include <cstring>
 #include "func.h"
 
