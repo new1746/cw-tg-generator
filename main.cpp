@@ -42,7 +42,7 @@ int main()
 		}
 		case 8:
 		{
-			//grid8(numbert);
+			grid8(numbert, buffer);
 			break;
 		}
 		case 16:
