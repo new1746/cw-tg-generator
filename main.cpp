@@ -52,7 +52,7 @@ int main()
 		}
 		case 32:
 		{
-			//grid32(numbert);
+			grid32(numbert, buffer);
 			break;
 		}
 	}
