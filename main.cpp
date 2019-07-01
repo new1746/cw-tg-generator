@@ -37,7 +37,7 @@ int main()
 	{
 		case 4: 
 		{
-			//grid4(numbert);
+			grid4(numbert, buffer);
 			break;
 		}
 		case 8:
