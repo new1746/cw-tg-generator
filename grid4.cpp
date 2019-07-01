@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
-#include "func.h"
-
+typedef char text[11];
 using namespace std;
 
-int grid4(int numt)
+int grid4(int numt, text buffer[])
 {
 	int teamsN[6] = {0,1,-1,-1,2,3}, winner = -1;
 	int key; 
@@ -18,7 +17,7 @@ int grid4(int numt)
 	{
 		cin>>key;
 		system("clear");
-		if((teamsN[2]==key || teamsN[3]==key) && teamsN[2]!=-1 && teamsN[3]!=-1) winner = teamsN[key];
+		if((key==2 || key==3) && teamsN[2]!=-1 && teamsN[3]!=-1) winner = teamsN[key];
 		if((key==0 || key==1) && teamsN[2] == -1) teamsN[2] = teamsN[key];
 		if((key==4 || key==5) && teamsN[3] == -1) teamsN[3] = teamsN[key];
 		for(int i =0; i<6; i++)
