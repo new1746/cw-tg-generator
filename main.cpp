@@ -10,25 +10,25 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	srand(time(0));
 	char inputtn[100];
-	int numbert = 8;
+	int numbert = 32;
 	string check;
-	cout<<"Ââåäèòå êîëè÷åñòâî êîìàíä ğàâíîå 4/8/16/32."<<endl;
+	cout<<"Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´ Ñ€Ğ°Ğ²Ğ½Ğ¾Ğµ 4/8/16/32."<<endl;
 	cin>>numbert;
 	while(numbert!=4 && numbert!=8 && numbert!=16 && numbert!=32)
 	{
 		numbert = 0;
-		cout<<"Êîä îøèáêè: 1. Êîëè÷åñòâî êîìàíä äîëæíî áûòü ğàâíî 4/8/16/32."<<endl;
+		cout<<"ĞšĞ¾Ğ´ Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸: 1. ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ñ€Ğ°Ğ²Ğ½Ğ¾ 4/8/16/32."<<endl;
 		cin>>numbert;
 	}
 	for(int i=0; i<numbert; i++)
 	{
-		cout<<"Ââåäèòå íàçâàíèå êîìàíäû "<<i+1<<" íà àíãëèéñêîì ÿçûêå:"<<endl;
+		cout<<"Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ñ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñ‹ "<<i+1<<" Ğ½Ğ° Ğ°Ğ½Ğ³Ğ»Ğ¸Ğ¹ÑĞºĞ¾Ğ¼ ÑĞ·Ñ‹ĞºĞµ:"<<endl;
 		cin>>inputtn;
 		while(strlen(inputtn)>ttl)
 		{
 			strcpy(inputtn,"");
 			cout<<inputtn<<endl;
-			cout<<"Êîä îøèáêè: 2. Êîëè÷åñòâî ñèìâîëîâ íå äîëæíî ïğåâûøàòü "<<ttl<<"."<<endl;
+			cout<<"ĞšĞ¾Ğ´ Ğ¾ÑˆĞ¸Ğ±ĞºĞ¸: 2. ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ² Ğ² Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğ¸ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñ‹ Ğ½Ğµ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ¿Ñ€ĞµĞ²Ñ‹ÑˆĞ°Ñ‚ÑŒ "<<ttl<<"."<<endl;
 			cin>>inputtn;
 		}
 		strcpy(buffer[i], inputtn);
@@ -37,20 +37,22 @@ int main()
 	{
 		case 4: 
 		{
-			grid4(numbert);
+			//grid4(numbert);
 			break;
 		}
 		case 8:
 		{
-			grid8(numbert);
+			//grid8(numbert);
 			break;
 		}
 		case 16:
 		{
+			//grid16(numbert);
 			break;
 		}
 		case 32:
 		{
+			//grid32(numbert);
 			break;
 		}
 	}
