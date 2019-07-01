@@ -1,7 +1,7 @@
 all: tgg.exe
 
-tgg.exe: main.o grid4.o
-	g++ -fpermissive main.o grid4.o -o tgg.exe
+tgg.exe: grid4.o main.o
+	g++ -fpermissive grid4.o main.o -o tgg.exe
 
 main.o: main.cpp
 	g++ -fpermissive -c -Wall main.cpp
