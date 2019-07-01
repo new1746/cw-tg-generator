@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
+
 typedef char text[11];
+
 using namespace std;
 
 int grid4(int numt, text buffer[])
