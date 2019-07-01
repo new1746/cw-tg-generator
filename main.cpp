@@ -47,7 +47,7 @@ int main()
 		}
 		case 16:
 		{
-			//grid16(numbert);
+			grid16(numbert, buffer);
 			break;
 		}
 		case 32:
