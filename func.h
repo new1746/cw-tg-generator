@@ -7,5 +7,5 @@ text buffer[32];
 
 int grid4(int, text[]);
 int grid8(int, text[]);
-int grid16(int);
+int grid16(int, text[]);
 int grid32(int);
