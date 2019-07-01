@@ -1,19 +1,10 @@
-CC=g++ #Компилятор
-CFLAGS=-c #Флаги
+all: tgg.exe
 
-all: tgg
-
-tgg: main.o grid4.o grid8.o
-	$(CC) main.o grid4.o grid8.o -o tgg
+tgg.exe: main.o
+	g++ -fpermissive main.o -o tgg.exe
 
 main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
-
-grid4.o: grid4.cpp
-	$(CC) grid4.cpp
-
-grid8.o: grid8.cpp
-	$(CC) grid8.cpp
+	g++ -fpermissive -c -Wall main.cpp
 
 clean:
-	rm -rf *.o hello
+	rm -rf *.o tgg.exe
